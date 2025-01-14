@@ -1,24 +1,94 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="he">
 
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>כניסה</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
 
-    <body>
-       <h1>log in</h1>
-       <br>
-       <div>username: </div>
-       <br>
-       <input id="usernameInput">
-       <br>
-       <br>
-       <div>password: </div>
-       <br>
-       <input id="passwordInput">
-       <br>
-       <br>
-       <button id="loginButton">log in</button>
-       <script type="module" src="login.js"></script>
-       
-    </body>
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #555;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 500px) {
+            .container {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>כניסה</h1>
+        <form id="loginForm">
+            <label for="usernameInput">שם משתמש:</label>
+            <input type="text" id="usernameInput" name="username" required>
+
+            <label for="passwordInput">סיסמא:</label>
+            <input type="password" id="passwordInput" name="password" required>
+
+            <button type="submit" id="loginButton">כניסה</button>
+        </form>
+    </div>
+
+    <script type="module" src="login.js"></script>
+</body>
+
 </html>

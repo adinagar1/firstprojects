@@ -1,63 +1,132 @@
 <!DOCTYPE html>
 <html lang="he">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shih Tzu</title>
     <style>
+        /* הגדרות כלליות ל-body */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4; /* אפור בהיר */
+            font-family: 'Roboto', sans-serif;
+            /* קביעת גופן */
+            background-color: #f5f5f5;
+            /* צבע הרקע */
             margin: 0;
+            /* ביטול מרווחים מכל צדדי הדף */
             padding: 0;
+            /* ביטול רווחים פנימיים */
             direction: rtl;
-            color: #333; /* טקסט אפור כהה */
+            /* הפיכת הכיוון לימין */
+            color: #333;
+            /* צבע הטקסט */
+            display: flex;
+            /* הפעלת גמישות בתצוגה */
+            justify-content: center;
+            /* יישור לתווך אופקי */
+            align-items: center;
+            /* יישור לתווך אנכי */
+            min-height: 100vh;
+            /* גובה מינימלי למסך */
         }
-        header {
-            background-color: #000; /* שחור */
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
+
+        /* הגדרות ל-content */
         .content {
             margin: 20px;
+            /* ריווח מכל הצדדים */
             padding: 20px;
-            background-color: white; /* לבן */
+            /* ריווח פנימי */
+            background-color: #ffffff;
+            /* צבע הרקע של התיבה */
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* הקצעת פינות */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            /* הצללת התיבה */
+            display: flex;
+            /* הפעלת גמישות בתצוגה */
+            flex-direction: column;
+            /* התצוגה במקביל לרוחב התיבה */
+            align-items: center;
+            /* יישור כל האלמנטים בתיבה */
+            width: 80%;
+            /* גודל מרבי בתיבה */
+            max-width: 800px;
+            /* קביעת רוחב מרבי */
+            text-align: center;
+            /* יישור הטקסט */
         }
+
+        /* הגדרות ל-h2 בתוך התוכן */
         .content h2 {
-            color: #000; /* שחור */
+            color: #2c3e50;
+            /* צבע הכותרת הפנימית */
+            font-size: 2.2em;
+            /* גודל הפונט */
+            margin-bottom: 10px;
+            /* ריווח תחתון */
         }
+
+        /* הגדרות ל-info */
         .info {
             font-size: 1.1em;
+            /* גודל הפונט */
             line-height: 1.6;
-            color: #333; /* טקסט אפור כהה */
+            /* ריווח בין השורות */
+            color: #555;
+            /* צבע הטקסט */
+            text-align: justify;
+            /* הצדדת הטקסט */
         }
+
+        /* ריווחים בתוך המידע */
         .info div {
             margin-bottom: 15px;
+            /* ריווח תחתון */
         }
+
+        /* צבע של קטעים מודגשים */
         .info strong {
-            color: #000; /* שחור */
+            color: #2c3e50;
+            /* צבע הטקסט המודגש */
         }
+
+        /* ריווחי טקסט */
         .info p {
-            margin: 5px 0;
+            margin: 8px 0;
+            /* ריווחי פיסקה */
+        }
+
+        /* הגדרות לוידאו */
+        .video-container {
+            margin-top: 20px;
+            /* ריווח מלמעלה */
+            width: 100%;
+            /* תופס את כל הרוחב */
+            max-width: 800px;
+            /* קביעת רוחב מרבי */
+            aspect-ratio: 16 / 9;
+            /* יחס רוחב גובה */
+            overflow: hidden;
+            /* מחיקה אוטומטית של תוכן חורג */
+            border-radius: 8px;
+            /* הקצעת פינות */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            /* הצללה */
+        }
+
+        /* הגדרות לאיפרפיקס */
+        .video-container iframe {
+            width: 100%;
+            /* תופס את כל הרוחב */
+            height: 450px;
+            /* גובה האיפרפיקס */
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <h1>Shih Tzu</h1>
-    </header>
-    
     <div class="content">
-        <h2>על הגזע</h2>
+        <h2>shizu</h2>
         <div class="info">
-            <p><strong>ה-Shih Tzu</strong> הוא גזע של כלב מסוג "טוי" או "כלב מחמד" שמקורו בטיבט, ונחשב לגזע שמקורו מהפקינזי והלאסה אפסו.</p>
+            <p><strong>ה-שיצו</strong> הוא גזע של כלב מסוג "טוי" או "כלב מחמד" שמקורו בטיבט, ונחשב לגזע שמקורו מהפקינזי
+                והלאסה אפסו.</p>
             <p><strong>תוחלת חיים:</strong> 10 - 16 שנים</p>
             <p><strong>אופי:</strong> משחקי, חכם, אוהב, אינטליגנטי, חברותי</p>
             <p><strong>האם הוא היפואלרגני?</strong> כן</p>
@@ -65,6 +134,11 @@
             <p><strong>משקל:</strong> 4 - 7.2 ק"ג (זכר, בוגר), 4 - 7.2 ק"ג (נקבה, בוגרת)</p>
             <p><strong>צבעים:</strong> שחור, לבן, ברינדל, כבד ולבן, כבד, חום בהיר, חום כהה, שחור ולבן, זהב, כחול</p>
         </div>
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/3WcwbNnpo-A" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
 </body>
+
 </html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="he">
+<!-- מציין שמדובר בקובץ HTML בתקן HTML5 ומגדיר שהשפה היא עברית -->
+
+<head>
+    <title>belgian shepherd</title>
+    <!-- קובע את כותרת העמוד שתוצג בכרטיסיית הדפדפן -->
+
+    <style>
+        /* הגדרות עיצוב כלליות לעמוד */
+        body {
+            font-family: 'Roboto', sans-serif;
+            /* סוג הפונט */
+            background-color: #f5f5f5;
+            /* צבע הרקע של העמוד */
+            margin: 0;
+            padding: 0;
+            /* מסיר שוליים פנימיים וחיצוניים */
+            direction: rtl;
+            /* כיוון הטקסט - מימין לשמאל */
+            color: #333;
+            /* צבע טקסט ברירת מחדל */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* ממרכז את התוכן */
+            min-height: 100vh;
+            /* גובה מינימלי - כל גובה החלון */
+        }
+
+        .content {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            /* צבע רקע לבן */
+            border-radius: 8px;
+            /* פינות מעוגלות */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            /* צל סביב הקופסה */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* ממרכז את התוכן */
+            width: 80%;
+            max-width: 800px;
+            /* רוחב מקסימלי */
+            text-align: center;
+        }
+
+        .content h2 {
+            color: #2c3e50;
+            /* צבע כותרת */
+            font-size: 2.2em;
+            /* גודל פונט לכותרת המשנית */
+            margin-bottom: 10px;
+        }
+
+        .info {
+            font-size: 1.1em;
+            /* גודל טקסט */
+            line-height: 1.6;
+            /* מרחק בין שורות */
+            color: #555;
+            /* צבע טקסט כללי */
+            text-align: justify;
+            /* יישור טקסט לשני הצדדים */
+        }
+
+        .info div {
+            margin-bottom: 15px;
+            /* רווח בין פסקאות */
+        }
+
+        .info strong {
+            color: #2c3e50;
+            /* מדגיש טקסט */
+        }
+
+        .info p {
+            margin: 8px 0;
+            /* רווחים בין פסקאות */
+        }
+
+        .video-container {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px;
+            /* רוחב מקסימלי של מיכל הווידאו */
+            aspect-ratio: 16 / 9;
+            /* יחס רוחב-גובה */
+            overflow: hidden;
+            border-radius: 8px;
+            /* פינות מעוגלות */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            /* צל סביב המיכל */
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            /* גובה ורוחב של הווידאו */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- גוף העמוד שבו נמצא כל התוכן -->
+
+    <div class="content">
+        <!-- מיכל עיקרי לעיצוב ולתוכן של העמוד -->
+
+        <h2>belgian shepherd</h2>
+        <!-- כותרת משנית עם שם הגזע -->
+
+        <div class="info">
+            <!-- מיכל מידע טקסטואלי על הכלב -->
+
+            <p>רועה בלגי הוא גזע של כלב רועים המשמש את האדם לצרכים שונים.</p>
+            <!-- פסקה המסבירה על הגזע -->
+
+            <p><strong>תוחלת חיים:</strong> 10 עד 14 שנים</p>
+            <!-- תוחלת החיים של הכלב -->
+
+            <p><strong>אופי:</strong> ידידותי, עקשן, ערני, חרוץ, מגונן, בעל בטחון עצמי, פעיל</p>
+            <!-- מידע על האופי של הכלב -->
+
+            <p><strong>מסה:</strong> 25 – 30 ק"ג (זכר), 20 – 25 ק"ג (נקבה)</p>
+            <!-- מידע על המשקל של הכלב -->
+
+            <p><strong>גובה:</strong> 60 – 66 ס״מ (זכר), 56 – 61 ס״מ (נקבה, פרט בוגר, הכתף)</p>
+            <!-- גובה הכלב בזכר ובנקבה -->
+
+            <p><strong>צבעים:</strong> פאון שחור קצה, חום, מהגוני</p>
+            <!-- הצבעים האפשריים של הכלב -->
+
+            <p><strong>מוצא:</strong> בלגיה</p>
+            <!-- ארץ המוצא של הגזע -->
+
+            <p><strong>קבוצה:</strong> כלב רועים</p>
+            <!-- סוג הקבוצה של הכלב -->
+        </div>
+
+        <div class="video-container">
+            <!-- מיכל שמכיל וידאו על הכלב -->
+
+            <iframe src="https://www.youtube.com/embed/U767X7ptIis" frameborder="0" allowfullscreen></iframe>
+            <!-- סרטון על הכלב -->
+        </div>
+    </div>
+
+</body>
+
+</html>

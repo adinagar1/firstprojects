@@ -2,227 +2,271 @@
 <html lang="he">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Page</title>
+    <title>כניסה לאתר כלבים</title>
     <style>
-        /* עיצוב כללי */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* קביעת גופן הדף */
             background-color: #f5f5f5;
+            /* צבע הרקע של הדף */
+            background-image: url('https://images.unsplash.com/photo-1507525428034-3b44e273f2cb?ixlib=rb-4.0.3&ixid=M3wzNjMyN3wwfDF8c2VhcmNofDM3fGltYWdlLXNjaGVtZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1950&q=80');
+            /* תמונת הרקע */
+            background-size: cover;
+            /* הגדרת גודל התמונה לתפוס את כל הדף */
+            background-position: center;
+            /* תמונה במרכז הדף */
+            background-repeat: no-repeat;
+            /* התמונה לא חוזרת */
+            background-attachment: fixed;
+            /* התמונה תישאר קבועה בזמן גלילה */
+            display: flex;
+            /* גזירת מבנה שגולל בתפריט */
+            flex-direction: column;
+            /* פריסה אנכית */
+            align-items: center;
+            /* מרכז התוכן */
+            justify-content: center;
+            /* מרכז התוכן */
+            height: 100vh;
+            /* גובה מלא של המסך */
             margin: 0;
-            padding: 0;
+            /* אין שוליים */
+            padding: 20px;
+            /* רווח פנימי */
             color: #333;
-            direction: rtl;
+            /* צבע הטקסט */
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            /* צבע רקע מעודן */
+            padding: 40px;
+            /* רווח סביב התוכן */
+            border-radius: 10px;
+            /* מעגל שוליים */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* הצללה */
+            width: 80%;
+            /* רוחב הכלי */
+            max-width: 1000px;
+            /* מגבלה לרוחב מקסימלי */
+            margin: auto;
+            /* מיקום אוטומטי במרכז הדף */
+            text-align: center;
+            /* מרכז טקסט */
         }
 
         h1 {
-            text-align: center;
-            font-size: 3.2em;
-            color: #333;
-            margin-top: 40px;
-            font-weight: 600;
+            color: #555;
+            /* צבע הכותרת */
+            margin-bottom: 20px;
+            /* רווח תחת הכותרת */
         }
 
-        /* עיצוב כפתורים - הרשמה והתחברות */
-        .auth-buttons {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .auth-buttons a {
-            text-decoration: none;
-            margin: 10px;
-        }
-
-        #signupPage,
-        #loginPage {
-            background-color: #000;
-            color: white;
-            border: none;
-            padding: 15px 32px;
-            font-size: 16px;
-            border-radius: 25px;
-            transition: background-color 0.3s ease;
-        }
-
-        #signupPage:hover,
-        #loginPage:hover {
-            background-color: #333;
-        }
-
-        /* עיצוב התמונות */
-        .titles {
-            margin-top: 40px;
+        p {
+            color: #666;
+            /* צבע הטקסט */
+            line-height: 1.6;
+            /* ריווח בין השורות */
+            margin-bottom: 20px;
+            /* רווח מתחת לפסקה */
         }
 
         table {
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-            border-spacing: 30px;
+            width: 100%;
+            /* טבלה בגובה מלא */
+            margin-top: 20px;
+            /* רווח מעל הטבלה */
+            border-collapse: collapse;
+            /* גבולות הטבלה יתחברו */
+        }
+
+        table td {
+            padding: 15px;
+            /* רווח סביב כל תא בטבלה */
+            vertical-align: top;
+            /* יישור פנימי לתוכן תא */
+            text-align: center;
+            /* יישור טקסטים במרכז התא */
         }
 
         .images {
             width: 220px;
-            height: 200px;
-            border-radius: 15px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease;
-            cursor: pointer;
+            /* גובה התמונה */
+            height: 180px;
+            /* רוחב התמונה */
+            margin: 10px auto;
+            /* רווח סביב התמונה */
+            border-radius: 10px;
+            /* מעגל שוליים */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* הצללה */
         }
 
         .images:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
+            /* הגדלת התמונה כשמעבירים עליה */
+            transition: transform 0.3s;
+            /* מעבר חלק */
+        }
+
+        .button {
+            background-color: #007BFF;
+            /* צבע רקע לכפתור */
+            color: white;
+            /* צבע הטקסט בכפתור */
+            border: none;
+            /* אין קו גבול */
+            padding: 12px 20px;
+            /* רווח סביב הכפתור */
+            margin-top: 10px;
+            /* רווח מעל */
+            border-radius: 8px;
+            /* קשת שוליים */
+            cursor: pointer;
+            /* סמיילור פעיל */
+            transition: background-color 0.3s;
+            /* מעבר צבע */
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            /* צבע הרקע בזמן צביעה על הכפתור */
         }
 
         a {
-            font-size: 1.1em;
+            text-decoration: none;
+            /* ביטול קו תחתון */
             color: #333;
-            text-decoration: none;
-            font-weight: 600;
-            display: block;
-            margin-top: 10px;
-            text-align: center;
+            /* צבע קישורים */
         }
 
-        /* עיצוב כפתורים (לבבות) */
-        .heart-button {
-            background: none;
+        a:hover {
+            color: #007BFF;
+            /* צבע בזמן מגע בקישור */
+        }
+
+        .navigation-buttons {
+            display: flex;
+            /* פריסת כפתורים בצורה אופקית */
+            justify-content: center;
+            /* כיוון בתפריט למרכז */
+            gap: 20px;
+            /* רווח בין כפתורים */
+            margin-bottom: 30px;
+            /* רווח תחת התפריט */
+        }
+
+        .navigation-buttons button {
+            background-color: #007BFF;
+            /* צבע רקע לכפתורים בתפריט */
+            color: white;
+            /* צבע הכפתור */
             border: none;
+            /* אין גבול */
+            padding: 12px 20px;
+            /* רווח סביב הכפתור */
+            border-radius: 8px;
+            /* קשת שוליים */
             cursor: pointer;
-            padding: 0;
-            transition: transform 0.3s ease;
+            /* אייקון מורה */
+            transition: background-color 0.3s;
+            /* מעבר צבע */
         }
 
-        .heart-button img {
-            width: 30px;
-            height: 30px;
+        .navigation-buttons button:hover {
+            background-color: #0056b3;
+            /* מעבר צבע בזמן הצבעה */
         }
 
-        .heart-button:hover {
-            transform: scale(1.1);
-        }
+        @media (max-width: 768px) {
+            .images {
+                width: 90%;
+                /* תופס 90% מהרוחב במסכים קטנים */
+                height: auto;
+                /* גובה גמיש */
+            }
 
-        /* עיצוב חלון התמונה הגדולה */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            overflow: auto;
-            padding-top: 60px;
-        }
-
-        .modal-content {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-        }
-
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
+            .container {
+                padding: 20px;
+                /* רווחים פנימיים קטנים יותר */
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- כפתורי הרשמה והתחברות -->
+    <div class="navigation-buttons">
+        <a href="signup.html"><button id="signupPage">הרשמה</button></a>
+        <a href="login.html"><button id="loginPage">כניסה</button></a>
+    </div>
 
+    <div class="container">
+        <h1>ברוך הבא לאתר כלבים</h1>
+        <p>אתר זה ייחודי למגדלי כלבים ואוהבי כלבים. בחר את הכלב האהוב עליך וקבל מידע נוסף עליו.</p>
 
-    <a href="C:\Users\User\firstprojects-2\website\pages\signup.html"><button id="signupPage">sigh up</button></a>
-
-
-    <a href="C:\Users\User\firstprojects-2\website\pages\login.html"><button id="loginPage">log in</button></a>
-
-
-    <!-- כותרת עמוד -->
-    <div class="titles">
-        <h1>הכלב האהוב עליך</h1>
-
-        <!-- טבלה עם תמונות והקישורים לכל דף של כלב -->
         <table>
             <tr>
                 <td>
-                    <img src="https://did.li/uxPaa" class="images" id="img1" onclick="openModal('img1')">
-                    <a href="shizu.html">Shizu</a>
+                    <img src="https://did.li/uxPaa" alt="שיצו" class="images">
+                    <p><strong>שיצו</strong></p>
+                    <p>כלב קטן, אוהב חברים, ואידיאלי למשפחות. שיצו הוא כלב שמח וצייתן.</p>
+                    <a href="shizu.html"><button>למידע נוסף</button></a>
                 </td>
                 <td>
-                    <img src="https://did.li/oO1CN" class="images" id="img2" onclick="openModal('img2')">
-                    <a href="dobermann.html">Dobermann</a>
+                    <img src="https://did.li/xJ2CN" alt="רועה בלגי" class="images">
+                    <p><strong>רועה בלגי</strong></p>
+                    <p>רועה בלגי הוא כלב אינטליגנטי, נאמן ומופנם, ידוע ביכולת שלו לעבוד במשימות שונות ובשילובו עם גזעים
+                        נוספים לשיפור מאפייני השמירה והביטחון.</p>
+                    <a href="BelgianShepherd.html"><button>למידע נוסף</button></a>
                 </td>
                 <td>
-                    <img src="https://did.li/zgEIw" class="images" id="img3" onclick="openModal('img3')">
-                    <a href="pitbull.html">Pit bull</a>
+                    <img src="https://did.li/96VTY" alt="פודל" class="images">
+                    <p><strong>פודל</strong></p>
+                    <p>הפודל הוא כלב חכם וממושמע, מתאים למשפחות ולדירות. הוא בעל מבנה גוף קומפקטי ומתלטף.</p>
+                    <a href="poodle.html"><button>למידע נוסף</button></a>
                 </td>
                 <td>
-                    <img src="https://did.li/i6b6q" class="images" id="img4" onclick="openModal('img4')">
-                    <a href="goldenretriever.html">Golden Retriever</a>
+                    <img src="https://did.li/i6b6q" alt="רטריבר" class="images">
+                    <p><strong>רטריבר</strong></p>
+                    <p>רטריבר הוא כלב אוהב ילדים וחברותי. הוא ידוע בכישורי ההצלה שלו.</p>
+                    <a href="goldenretriever.html"><button>למידע נוסף</button></a>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <img src="https://did.li/OIhOf" class="images" id="img5" onclick="openModal('img5')">
-                    <a href="GermanShepherd.html">German Shepherd</a>
+                    <img src="https://did.li/OIhOf" alt="ג'רמן שפרד" class="images">
+                    <p><strong>ג'רמן שפרד</strong></p>
+                    <p>ג'רמן שפרד הוא כלב חכם ואמין. מתאים לעבודה שוטפת כמו שמירה וייעוד.</p>
+                    <a href="GermanShepherd.html"><button>למידע נוסף</button></a>
                 </td>
                 <td>
-                    <img src="https://did.li/Tr7lC" class="images" id="img6" onclick="openModal('img6')">
-                    <a href="Dachshund.html">Dachshund</a>
+                    <img src="https://did.li/CsQaa" alt="צ'יוואווה" class="images">
+                    <p><strong>צ'יוואווה</strong></p>
+                    <p>צ'יוואווה הוא גזע הכלבים הקטן בעולם,ידוע בעיניו הגדולות, באוזניו הזקופות, ובאופיו האנרגטי והאמיץ.
+                    </p>
+                    <a href="Chihuahua.html"><button>למידע נוסף</button></a>
                 </td>
                 <td>
-                    <img src="https://did.li/aDyZH" class="images" id="img7" onclick="openModal('img7')">
-                    <a href="Yorkshire.html">Yorkshire</a>
+                    <img src="https://did.li/XDiOf" alt="בולדוג" class="images">
+                    <p><strong>בולדוג</strong></p>
+                    <p> כלב הבולדוג הורבע כדי לשמש ככלב לוויה, הגזע הוא בדרך כלל
+                        רגוע וממושמע מאוד.</p>
+                    <a href="bulldog.html"><button>למידע נוסף</button></a>
                 </td>
                 <td>
-                    <img src="https://did.li/rO1CN" class="images" id="img8" onclick="openModal('img8')">
-                    <a href="SiberianHusky.html">Siberian Husky</a>
+                    <img src="https://did.li/rO1CN" alt="סיבריאן האסקי" class="images">
+                    <p><strong>סיבריאן האסקי</strong></p>
+                    <p>סיבריאן האסקי הוא כלב חזק ואנרגטי, מתאים למשפחות שמחפשות כלב פעיל.</p>
+                    <a href="SiberianHusky.html"><button>למידע נוסף</button></a>
                 </td>
             </tr>
         </table>
+
+        <p>אם אתם מעוניינים לאמץ כלב, חשוב לבחור את הכלב שמתאים לאורח החיים שלכם. לכל גזע כלב יש את המאפיינים הייחודיים
+            לו, והתאמה נכונה יכולה להפוך את החוויה שלכם לטובה ומוצלחת יותר.</p>
     </div>
-
-    <!-- Modal להגדלת תמונה -->
-    <div id="myModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="imgModal">
-    </div>
-
-    <script>
-        // פונקציה לפתיחת המודל של התמונה
-        function openModal(imgId) {
-            var modal = document.getElementById("myModal");
-            var modalImg = document.getElementById("imgModal");
-            var img = document.getElementById(imgId);
-            modal.style.display = "block";
-            modalImg.src = img.src;
-        }
-
-        // פונקציה לסגור את המודל
-        function closeModal() {
-            var modal = document.getElementById("myModal");
-            modal.style.display = "none";
-        }
-    </script>
 
 </body>
 

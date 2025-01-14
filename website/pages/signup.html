@@ -1,24 +1,139 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="he">
 
-    </head>
+<head>
+    <meta charset="UTF-8"> <!-- קביעת התווים להמרה ל-UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- התאמת הדף לגודל המסך -->
+    <title>הרשמה</title> <!-- כותרת הדף שמוצגת בראש הסרגל -->
+    <style>
+        /* עיצוב הדף הכללי */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* קביעת גופן לטקסט */
+            background-color: #f4f4f4;
+            /* צבע הרקע של הדף */
+            display: flex;
+            /* שימוש בגמישות בתצוגה */
+            justify-content: center;
+            /* יישור למרכז אופקי */
+            align-items: center;
+            /* יישור למרכז אנכי */
+            min-height: 100vh;
+            /* גובה מינימלי שכולל את כל המסך */
+            margin: 0;
+            /* ביטול מרווחים מכל הצדדים */
+            padding: 0;
+            /* ביטול ריווח פנימי */
+        }
 
-    <body>
-       <h1>sign up</h1>
-       <br>
-       <div>username: </div>
-       <br>
-       <input id="usernameInput">
-       <br>
-       <br>
-       <div>password: </div>
-       <br>
-       <input id="passwordInput">
-       <br>
-       <br>
-       <button id="signupButton">sign up</button>
-       <script type="module" src="signup.js"></script>
-       
-    </body>
+        /* עיצוב ה-container */
+        .container {
+            background-color: #fff;
+            /* צבע הרקע של תיבת ההרשמה */
+            padding: 40px;
+            /* ריווח פנימי */
+            border-radius: 8px;
+            /* הקצעת פינות */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* הצללת התיבה */
+            width: 100%;
+            /* תופסת את כל הרוחב */
+            max-width: 400px;
+            /* קביעת רוחב מרבי */
+            text-align: center;
+            /* יישור כל האלמנטים במרכז */
+        }
+
+        /* עיצוב לכותרת (h1) */
+        h1 {
+            color: #333;
+            /* צבע הכותרת */
+            margin-bottom: 20px;
+            /* ריווח תחתון */
+        }
+
+        /* עיצוב ל-Labels */
+        label {
+            display: block;
+            /* הצגת כל תווית כקו חדש */
+            margin-top: 10px;
+            /* ריווח בין התווית לבין הטקסט */
+            color: #555;
+            /* צבע התווית */
+            text-align: left;
+            /* יישור התווית לימין */
+        }
+
+        /* עיצוב ל-Inputs */
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            /* תופס את כל הרוחב */
+            padding: 12px 15px;
+            /* ריווח פנימי */
+            border: 1px solid #ccc;
+            /* גבול התיבה */
+            border-radius: 4px;
+            /* הקצעת פינות */
+            margin-top: 5px;
+            /* ריווח מעל התיבה */
+            box-sizing: border-box;
+            /* התאמת מידות */
+        }
+
+        /* עיצוב לכפתור */
+        button {
+            width: 100%;
+            /* תופס את כל הרוחב */
+            padding: 14px;
+            /* ריווח פנימי */
+            background-color: #007BFF;
+            /* צבע הרקע */
+            border: none;
+            /* ביטול גבול */
+            border-radius: 4px;
+            /* הקצעת פינות */
+            color: #fff;
+            /* צבע הטקסט */
+            font-size: 16px;
+            /* גודל הפונט */
+            margin-top: 20px;
+            /* ריווח מעל הכפתור */
+            cursor: pointer;
+            /* סימן העכבר */
+        }
+
+        /* צבע הכפתור בעת hover */
+        button:hover {
+            background-color: #0056b3;
+            /* שינוי צבע בעת מעבר עכבר */
+        }
+
+        /* התאמות רספונסיביות */
+        @media (max-width: 500px) {
+            .container {
+                padding: 30px;
+                /* ריווח פנימי לגודל מסך קטן */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>הרשמה</h1>
+        <form id="signupForm">
+            <label for="usernameInput">שם משתמש:</label>
+            <input type="text" id="usernameInput" name="username" required> <!-- קלט טקסט עבור שם משתמש -->
+
+            <label for="passwordInput">סיסמא:</label>
+            <input type="password" id="passwordInput" name="password" required> <!-- קלט סיסמא -->
+
+            <button type="submit" id="signupButton">הרשמה</button> <!-- כפתור ההרשמה -->
+        </form>
+    </div>
+
+    <script type="module" src="signup.js"></script> <!-- הפנייה לקובץ JavaScript שמטפל באירועים -->
+</body>
+
 </html>

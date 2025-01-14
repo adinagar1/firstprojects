@@ -1,70 +1,150 @@
 <!DOCTYPE html>
 <html lang="he">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Retriever</title>
+    <title>גולדן רטריבר</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4; /* אפור בהיר */
+            font-family: 'Roboto', sans-serif;
+            /* קביעת גופן הדף */
+            background-color: #f5f5f5;
+            /* צבע הרקע של הדף */
             margin: 0;
+            /* הרווח מכל הצדדים יוגדר כאפס */
             padding: 0;
+            /* אין רווח פנימי */
             direction: rtl;
-            color: #333; /* טקסט אפור כהה */
+            /* כיוון כתיבה מימין לשמאל */
+            color: #333;
+            /* צבע הטקסט הכללי בדף */
+            display: flex;
+            justify-content: center;
+            /* מחלק את התוכן לאיזור המרכזי */
+            align-items: center;
+            /* מסדר את התוכן באמצע */
+            min-height: 100vh;
+            /* מבטיח שהדף יתפוס לפחות את כל גובה המסך */
         }
+
         header {
-            background-color: #000; /* שחור */
+            background-color: #2c3e50;
+            /* צבע רקע להדגשה */
             color: white;
+            /* צבע הטקסט */
             text-align: center;
-            padding: 20px 0;
+            /* מרכז הטקסט */
+            padding: 30px 0;
+            /* רווח מעל ומתחת */
         }
+
         h1 {
-            font-size: 2.5em;
+            font-size: 2.8em;
+            /* גודל הכותרת הראשית */
             margin: 0;
+            /* אין רווח עליון ותחתון */
         }
+
         .content {
             margin: 20px;
             padding: 20px;
-            background-color: white; /* לבן */
+            background-color: #ffffff;
+            /* צבע הרקע לתוכן */
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* מעגל שוליים */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            /* הצללה */
+            display: flex;
+            flex-direction: column;
+            /* ארגון האלמנטים כלפי מטה */
+            align-items: center;
+            /* התוכן במרכז */
+            width: 80%;
+            /* רוחב הכלי */
+            max-width: 800px;
+            /* מגבלה לרוחב מקסימלי */
+            text-align: center;
+            /* כל הטקסטים במרכז */
         }
+
         .content h2 {
-            color: #000; /* שחור */
+            color: #2c3e50;
+            /* צבע הכותרת המשנית */
+            font-size: 2.2em;
+            /* גודל הכותרת */
+            margin-bottom: 10px;
+            /* רווח מתחת לכותרת */
         }
+
         .info {
             font-size: 1.1em;
+            /* גודל הפונט */
             line-height: 1.6;
-            color: #333; /* טקסט אפור כהה */
+            /* ריווח בין שורות */
+            color: #555;
+            /* צבע הטקסט */
+            text-align: justify;
+            /* יישור הטקסט */
         }
+
         .info div {
             margin-bottom: 15px;
+            /* רווח מתחת לכל מידע */
         }
+
         .info strong {
-            color: #000; /* שחור */
+            color: #2c3e50;
+            /* צבע מילים מודגשות */
         }
+
         .info p {
-            margin: 5px 0;
+            margin: 8px 0;
+            /* רווחים בין פסקאות */
+        }
+
+        .video-container {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 16 / 9;
+            /* יחס רוחב גובה */
+            overflow: hidden;
+            /* מחסה את התוכן הנפלט */
+            border-radius: 8px;
+            /* קשת לקצוות */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            /* הצללה */
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            /* גובה הוידאו */
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <h1>Golden Retriever</h1>
-    </header>
-    
+
     <div class="content">
-        <h2>על הגזע</h2>
+        <h2>גולדן רטריבר</h2>
         <div class="info">
-            <p><strong>The Golden Retriever</strong> הוא גזע כלבים סקוטי בגודל בינוני, שנחשב לגזע של כלבי רטריבר. הוא מתאפיין בטבע עדין ואוהב ובפרווה זהובה מרהיבה. מדובר בכלב עבודה, והרשמתו לגזע מותנית בהצלחה במבחן עבודה.</p>
+            <p><strong>הגולדן רטריבר</strong> הוא גזע כלבים פופולרי בזכות טיב העבודה שלו ונעימותו המשפחתית. הוא
+                ידוע באינטליגנציה שלו ובאופיו החברותי והאמין.</p>
+            <p><strong>פרווה ועיצוב:</strong> פרוותו הארוכה והזהובה מעניקה לו מראה אצילי, מה שהופך אותו לכלב נאה במיוחד.
+            </p>
+            <p><strong>אופי ונפש:</strong> Golden Retrievers הם כלבים חברותיים ואוהבים שמשתלבים היטב במשפחה, ידידותיים
+                לילדים ובעלי רצון גבוה לרצות את בעליהם.</p>
             <p><strong>תוחלת חיים:</strong> 10 - 12 שנים</p>
-            <p><strong>אופי:</strong> אינטליגנטי, טוב לב, חברותי, אמין, נאמן, בטוח בעצמו</p>
-            <p><strong>מוצא:</strong> הממלכה המאוחדת, סקוטלנד</p>
-            <p><strong>צבעים:</strong> זהוב כהה, זהוב בהיר, שמנת, זהוב</p>
-            <p><strong>האם הוא היפואלרגני?</strong> לא</p>
             <p><strong>משקל:</strong> נקבה: 25-32 ק"ג, זכר: 30-34 ק"ג</p>
+            <p><strong>האם הם היפואלרגניים?</strong> לא</p>
+        </div>
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/6XgdTEtA8WM" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 </body>
+
 </html>

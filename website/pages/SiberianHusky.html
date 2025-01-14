@@ -1,71 +1,151 @@
 <!DOCTYPE html>
 <html lang="he">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siberian Husky</title>
+
     <style>
+        /* הגדרות כלליות ל-body */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4; /* אפור בהיר */
+            font-family: 'Roboto', sans-serif;
+            /* קביעת גופן לטקסט */
+            background-color: #f5f5f5;
+            /* צבע הרקע */
             margin: 0;
+            /* ביטול מרווחים מכל צדדי הדף */
             padding: 0;
+            /* ביטול רווחים פנימיים */
             direction: rtl;
-            color: #333; /* טקסט אפור כהה */
+            /* הפיכת הכיוון לימין */
+            color: #333;
+            /* צבע הטקסט */
+            display: flex;
+            /* הפעלת גמישות בתצוגה */
+            justify-content: center;
+            /* יישור לתווך אופקי */
+            align-items: center;
+            /* יישור לתווך אנכי */
+            min-height: 100vh;
+            /* גובה מינימלי למסך */
         }
-        header {
-            background-color: #000; /* שחור */
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
+
+        /* הגדרות ל-content */
         .content {
             margin: 20px;
+            /* ריווח מכל הצדדים */
             padding: 20px;
-            background-color: white; /* לבן */
+            /* ריווח פנימי */
+            background-color: #ffffff;
+            /* צבע הרקע של התיבה */
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* הקצעת פינות */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            /* הצללה התיבה */
+            display: flex;
+            /* הפעלת גמישות בתצוגה */
+            flex-direction: column;
+            /* התצוגה במקביל לרוחב התיבה */
+            align-items: center;
+            /* יישור כל האלמנטים בתיבה */
+            width: 80%;
+            /* גודל מרבי בתיבה */
+            max-width: 800px;
+            /* קביעת רוחב מרבי */
+            text-align: center;
+            /* יישור טקסט */
         }
+
+        /* הגדרות ל-h2 בתוך התוכן */
         .content h2 {
-            color: #000; /* שחור */
+            color: #2c3e50;
+            /* צבע הכותרת הפנימית */
+            font-size: 2.2em;
+            /* גודל הפונט */
+            margin-bottom: 10px;
+            /* ריווח תחתון */
         }
+
+        /* הגדרות ל-info */
         .info {
             font-size: 1.1em;
+            /* גודל הפונט */
             line-height: 1.6;
-            color: #333; /* טקסט אפור כהה */
+            /* ריווח בין השורות */
+            color: #555;
+            /* צבע הטקסט */
+            text-align: justify;
+            /* הצדדת הטקסט */
         }
+
+        /* ריווחים בתוך המידע */
         .info div {
             margin-bottom: 15px;
+            /* ריווח תחתון */
         }
+
+        /* צבע של קטעים מודגשים */
         .info strong {
-            color: #000; /* שחור */
+            color: #2c3e50;
+            /* צבע הטקסט המודגש */
         }
+
+        /* ריווחי טקסט */
         .info p {
-            margin: 5px 0;
+            margin: 8px 0;
+            /* ריווחי פיסקה */
+        }
+
+        /* הגדרות לוידאו */
+        .video-container {
+            margin-top: 20px;
+            /* ריווח מלמעלה */
+            width: 100%;
+            /* תופס את כל הרוחב */
+            max-width: 800px;
+            /* קביעת רוחב מרבי */
+            aspect-ratio: 16 / 9;
+            /* יחס רוחב גובה */
+            overflow: hidden;
+            /* מחיקה אוטומטית של תוכן חורג */
+            border-radius: 8px;
+            /* הקצעת פינות */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            /* הצללה */
+        }
+
+        /* הגדרות לאיפרפיקס */
+        .video-container iframe {
+            width: 100%;
+            /* תופס את כל הרוחב */
+            height: 450px;
+            /* גובה האיפרפיקס */
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <h1>Siberian Husky</h1>
-    </header>
-    
     <div class="content">
-        <h2>על הגזע</h2>
+        <h2>Siberian Husky</h2>
         <div class="info">
-            <p><strong>ה-Siberian Husky</strong> הוא גזע כלבים בגודל בינוני שנועד למשיכת מזחלות. הגזע שייך למשפחת הכלבים מסוג "ספיץ'". הוא מזוהה בזכות פרוותו העבה עם שכבת פרווה כפולה, אוזניים משולשות וזקופות, ודפוסים ייחודיים, והוא קטן יותר מה-<em>Alaskan Malamute</em> הדומה לו במראה.</p>
+            <p><strong>האסקי סיבירי</strong> הוא גזע כלבים בגודל בינוני שנועד למשיכת מזחלות. הגזע שייך למשפחת הכלבים
+                מסוג "ספיץ'". הוא מזוהה בזכות פרוותו העבה עם שכבת פרווה כפולה, אוזניים משולשות וזקופות, ודפוסים
+                ייחודיים, והוא קטן יותר מה-אלסקה מלאמוט הדומה לו במראה.</p>
             <p><strong>תוחלת חיים:</strong> 12 - 15 שנים</p>
             <p><strong>אופי:</strong> אינטליגנטי, חברותי, נעים, ערני, עדין</p>
             <p><strong>מוצא:</strong> סיביר</p>
             <p><strong>משקל:</strong> נקבה: 16-23 ק"ג, זכר: 20-27 ק"ג</p>
-            <p><strong>צבעים:</strong> לבן, שחור, סייבל ולבן, אפור ולבן, שחור וצהוב, כסף-אפור, אדום ולבן, שחור ולבן, אפור</p>
+            <p><strong>צבעים:</strong> לבן, שחור, סייבל ולבן, אפור ולבן, שחור וצהוב, כסף-אפור, אדום ולבן, שחור ולבן,
+                אפור</p>
             <p><strong>גובה:</strong> נקבה: 51-56 ס"מ, זכר: 53-60 ס"מ</p>
             <p><strong>האם הוא היפואלרגני?</strong> לא</p>
+            <div>
+                <!-- ווידאו מתוך YouTube -->
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mBwkTKok_tY?feature=shared"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
     </div>
 </body>
+
 </html>

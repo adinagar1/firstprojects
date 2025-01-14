@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="he"> <!-- מכריז על סוג הקובץ כ-HTML ומציין שהשפה היא עברית (right to left) -->
+
+<head>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            /* מגדיר את גופן הדף ל-'Roboto' או 'sans-serif' כשאין תמיכה בגופן הזה */
+
+            background-color: #f5f5f5;
+            /* קובע צבע רקע לדף */
+
+            margin: 0;
+            /* מבטל את המרווחים מהקצוות של הדף */
+
+            padding: 0;
+            /* מבטל את הרווחים הפנימיים */
+
+            direction: rtl;
+            /* קובע את כיוון הטקסט כימני לשמאלי (עברית) */
+
+            color: #333;
+            /* קובע צבע טקסט לדף */
+
+            display: flex;
+            /* מאפשר עיצוב וגמישות לפריסה פנימית */
+
+            justify-content: center;
+            /* מיושר אל מרכז האופקי */
+
+            align-items: center;
+            /* מיושר אל מרכז האנכי */
+
+            min-height: 100vh;
+            /* מבטיח שהדף יתפס לגובה מסך מלא מינימום */
+        }
+
+        .content {
+            margin: 20px;
+            /* קובע מרווח חיצוני מהקצוות */
+
+            padding: 20px;
+            /* קובע מרווח פנימי בתיבה */
+
+            background-color: #ffffff;
+            /* צבע רקע של התיבה */
+
+            border-radius: 8px;
+            /* מעגל קצוות התיבה */
+
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            /* הצללה סביב התיבה */
+
+            display: flex;
+            /* הגדרת פריסה */
+
+            flex-direction: column;
+            /* מאפשר ארגון רכיבי הפנימי של התיבה בטור */
+
+            align-items: center;
+            /* מחליט היכן להיות ממורכז מבחינת רוחב */
+
+            width: 80%;
+            /* רוחב התיבה */
+
+            max-width: 800px;
+            /* קביעת רוחב מרבי של התיבה */
+
+            text-align: center;
+            /* יישור טקסטים למרכז */
+        }
+
+        .content h2 {
+            color: #2c3e50;
+            /* צבע הכותרת */
+
+            font-size: 2.2em;
+            /* גודל הכותרת */
+
+            margin-bottom: 10px;
+            /* מרווח תחתון */
+        }
+
+        .info {
+            font-size: 1.1em;
+            /* קביעת גודל הגופן */
+
+            line-height: 1.6;
+            /* קביעת מרווחים בין השורות */
+
+            color: #555;
+            /* צבע הטקסט */
+
+            text-align: justify;
+            /* יישור טקסטים */
+        }
+
+        .info div {
+            margin-bottom: 15px;
+            /* מרווחים בין הפסקאות */
+        }
+
+        .info strong {
+            color: #2c3e50;
+            /* צבע הטקסט כשהוא מודגש */
+        }
+
+        .info p {
+            margin: 8px 0;
+            /* מרווחים פנימיים בתוך הפסקאות */
+        }
+
+        .video-container {
+            margin-top: 20px;
+            /* מרווח עליון מתחת לתיבה */
+
+            width: 100%;
+            /* תופס את הרוחב המלא של ההורה */
+
+            max-width: 800px;
+            /* קביעת רוחב מרבי של התיבה */
+
+            aspect-ratio: 16 / 9;
+            /* הגדרת יחס גובה-רוחב */
+
+            overflow: hidden;
+            /* מבטל את ההצגה של תוכן חיצוני */
+
+            border-radius: 8px;
+            /* רדיוס הקצוות של התיבה */
+
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            /* הצללה סביב התיבה */
+        }
+
+        .video-container iframe {
+            width: 100%;
+            /* תופס את הרוחב המלא של התיבה */
+
+            height: 450px;
+            /* גובה ה-iframe */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>כניסה</h1>
+    </header>
+
+    <div class="content">
+        <h2>Poodle</h2>
+        <div class="info">
+            <p><strong>מידע כללי</strong> כלב הוא שמו היום-יומי של כלב הבית, תת-מין של הזאב המצוי, ממשפחת הכלביים...</p>
+            <p><strong>תוחלת חיים:</strong> 10 – 13 שנים</p>
+            <p><strong>משך היריון:</strong> 58 – 68 ימים</p>
+            <p><strong>גובה:</strong> 15 – 110 ס״מ (כתפיים)</p>
+            <p><strong>מהירות:</strong> רועה גרמני: 48 קמ״ש, גרייהאונד: 72 קמ״ש</p>
+            <p><strong>מסה:</strong> 1.4 – 110 ק"ג (פרט מבוית)</p>
+        </div>
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/PK8mwL4uMsM?feature=shared" frameborder="0"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="he">
+<!-- מציין שמדובר בקובץ HTML בתקן HTML5 ומגדיר שהשפה היא עברית -->
+
+<head>
+    <title></title>
+    <!-- קובע את כותרת העמוד שתוצג בכרטיסיית הדפדפן -->
+
+    <style>
+        /* עיצוב כללי של העמוד */
+        body {
+            font-family: 'Roboto', sans-serif;
+            /* הגדרת גופן */
+            background-color: #f5f5f5;
+            /* צבע רקע לעמוד */
+            margin: 0;
+            padding: 0;
+            /* ביטול שוליים פנימיים וחיצוניים */
+            direction: rtl;
+            /* כיוון הטקסט מימין לשמאל */
+            color: #333;
+            /* צבע טקסט כללי */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* ממרכז את התוכן באמצע העמוד */
+            min-height: 100vh;
+            /* גובה מינימלי בגובה חלון הדפדפן */
+        }
+
+        .content {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            /* צבע רקע לבן */
+            border-radius: 8px;
+            /* פינות מעוגלות */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            /* צל סביב הקופסה */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* ממרכז תוכן פנימי */
+            width: 80%;
+            max-width: 800px;
+            /* מגביל רוחב */
+            text-align: center;
+        }
+
+        .content h2 {
+            color: #2c3e50;
+            /* צבע כותרת */
+            font-size: 2.2em;
+            /* גודל טקסט */
+            margin-bottom: 10px;
+        }
+
+        .info {
+            font-size: 1.1em;
+            /* גודל טקסט */
+            line-height: 1.6;
+            /* מרווח בין שורות */
+            color: #555;
+            /* צבע טקסט */
+            text-align: justify;
+            /* יישור לשני הצדדים */
+        }
+
+        .info div {
+            margin-bottom: 15px;
+            /* רווח בין פסקאות */
+        }
+
+        .info strong {
+            color: #2c3e50;
+            /* מדגיש טקסט */
+        }
+
+        .info p {
+            margin: 8px 0;
+            /* רווח בין פסקאות */
+        }
+
+        .video-container {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px;
+            /* רוחב מקסימלי */
+            aspect-ratio: 16 / 9;
+            /* יחס רוחב-גובה */
+            overflow: hidden;
+            border-radius: 8px;
+            /* פינות מעוגלות */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            /* צל סביב מיכל הווידאו */
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            /* גובה ורוחב של הווידאו */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- גוף העמוד שבו נמצא התוכן -->
+
+    <div class="content">
+        <!-- מיכל עיקרי עבור התוכן -->
+
+        <h2>Bulldog</h2>
+        <!-- כותרת עם שם הגזע -->
+
+        <div class="info">
+            <!-- מיכל מידע על הכלב -->
+
+            <p><strong>בולדוג אנגלי</strong> הוא כלב רציני מאוד, מסור ונאמן. כלבים אלו דורשים המון תשומת לב ולכן הם לא
+                יתאימו לבעלים שצריך להשאיר אותם לבדם למשך פרקי זמן ממושכים. כלב הבולדוג האנגלי הורבע כדי לשמש ככלב
+                לוויה, הגזע הוא בדרך כלל רגוע וממושמע מאוד. בגלל שהם נחשבים כגזע דומיננטי, הכלבים חייבים ללמוד שבני האדם
+                הם האחראים במשק הבית.</p>
+            <!-- תיאור כללי של הבולדוג -->
+
+            <p><strong>ארץ מוצא:</strong> בריטניה</p>
+            <!-- ארץ המוצא של הכלב -->
+
+            <p><strong>שימושים:</strong> משפחה ותצוגות</p>
+            <!-- שימושים נפוצים של הכלב -->
+
+            <p><strong>קבוצה:</strong> פינצ'ר, שנאוצר ודמויי דוגה</p>
+            <!-- קבוצת הכלבים שאליה משתייך הגזע -->
+
+            <p><strong>תכונות:</strong></p>
+            <!-- תת-כותרת לתכונות -->
+            <ul>
+                <li><strong>משקל:</strong> 35 ק"ג</li>
+                <!-- משקל הכלב -->
+                <li><strong>גובה כתפיים:</strong> 35 ס"מ</li>
+                <!-- גובה הכלב בכתפיים -->
+                <li><strong>תוחלת חיים:</strong> 7-9 שנים</li>
+                <!-- תוחלת החיים של הכלב -->
+                <li><strong>אילוף:</strong> הסתגלות גבוהה</li>
+                <!-- יכולת האילוף של הכלב -->
+            </ul>
+        </div>
+
+        <div class="video-container">
+            <!-- מיכל שמכיל וידאו על הכלב -->
+
+            <iframe src="https://www.youtube.com/embed/tG2_Xiu1E8U?feature=shared" frameborder="0"
+                allowfullscreen></iframe>
+            <!-- סרטון להמחשה -->
+        </div>
+
+    </div>
+</body>
+
+</html>
