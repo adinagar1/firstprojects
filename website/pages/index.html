@@ -1,72 +1,259 @@
 <!DOCTYPE html>
-<html>
+<html lang="he">
 
 <head>
-  <title>Index Page</title>
-  <style>
-    .images {
-      width: 220px;
-      height: 200px;
-      align-items: center;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <style>
+        /* עיצוב כללי */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            direction: rtl;
+        }
 
-    .titles {
-      text-align: center;
-    }
+        h1 {
+            text-align: center;
+            font-size: 3.2em;
+            color: #333;
+            margin-top: 40px;
+            font-weight: 600;
+        }
 
-    table {
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .button1{
-      height: 30px;
-      width: 35px;
-    }
-    .button{
-background: none;
-border: none;
-    }
-    
-  </style>
+        /* עיצוב כפתורים - הרשמה והתחברות */
+        .auth-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .auth-buttons a {
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        #signupPage,
+        #loginPage {
+            background-color: #000;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            font-size: 16px;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        #signupPage:hover,
+        #loginPage:hover {
+            background-color: #333;
+        }
+
+        /* עיצוב התמונות */
+        .titles {
+            margin-top: 40px;
+        }
+
+        table {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            border-spacing: 30px;
+        }
+
+        .images {
+            width: 220px;
+            height: 200px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .images:hover {
+            transform: scale(1.1);
+        }
+
+        a {
+            font-size: 1.1em;
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /* עיצוב כפתורים (לבבות) */
+        .heart-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .heart-button img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .heart-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* עיצוב חלון התמונה הגדולה */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: auto;
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    </style>
 </head>
 
 <body>
 
-  <a href="\website\pages\signup.html"> <button id="signupPage">sign up</button></a>
-  <a href="\website\pages\login.html"> <button id="loginPage">log in</button></a>
-  <br>
+    <!-- כפתורי הרשמה והתחברות -->
+    <div class="auth-buttons">
+        <a href="\website\pages\signup.html">
+            <button id="signupPage">הרשמה</button>
+        </a>
+        <a href="\website\pages\login.html">
+            <button id="loginPage">התחברות</button>
+        </a>
+    </div>
 
-  <div class="titles">
-    <h1>your fav dog</h1>
+    <!-- כותרת עמוד -->
+    <div class="titles">
+        <h1>הכלב האהוב עליך</h1>
 
-    <table>
-      <tr>
-        <td><img src="https://did.li/uxPaa" class="images">          <br>
-          <div>shizu</div><button class="button"><img src="https://did.li/SZsgT" class="button1"></button></td>
-        <td><img src="https://did.li/oO1CN" class="images">          <br>
-          <div>Dobermann</div><button class="button"><img src="https://did.li/SZsgT" class="button1"></button></td>
-        <td><img src="https://did.li/zgEIw" class="images">          <br>
-          <div>Pit Bull</div><button class="button"><img src="https://did.li/SZsgT" class="button1"></button></td>
-        <td><img src="https://did.li/i6b6q" class="images">          <br>
-          <div>Golden Retriever</div><button class="button"><img src="https://did.li/SZsgT" class="button1"></button></td>
-        <td><img src="https://did.li/Rr7lC" class="images">          <br>
-          <div>Chihuahua</div><button class="button"><img src="https://did.li/SZsgT" class="button1"></button></td>
-      </tr>
-      <tr>
-        <td><img src="https://did.li/OIhOf" class="images">          <br>
-          <div>German Shepherd</div><button class="button"><img src="https://did.li/SZsgT" class="button1"></button></td>
-        <td><img src="https://did.li/Tr7lC" class="images">          <br>
-          <div>Dachshund</div><button class="button"><img src="https://did.li/SZsgT" class="button1"></button></td>
-        <td><img src="https://did.li/aDyZH" class="images">          <br>
-          <div>Yorkshire</div><button class="button"><img src="https://did.li/SZsgT" class="button1"></button></td>
-        <td><img src="https://did.li/rO1CN" class="images">          <br>
-          <div>Siberian Husky</div><button class="button"><img src="https://did.li/SZsgT" class="button1"></button></td>
-        <td><img src="https://did.li/gmnx5" class="images">          <br>
-          <div>Bulldog</div><button class="button"><img src="https://did.li/SZsgT" class="button1"></button></td>
-      </tr>
-    </table>
-  </div>
+        <!-- טבלה עם תמונות והקישורים לכל דף של כלב -->
+        <table>
+            <tr>
+                <td>
+                    <img src="https://did.li/uxPaa" class="images" id="img1" onclick="openModal('img1')">
+                    <a href="shizu.html">Shizu</a>
+                    <button class="heart-button">
+                        <img src="https://did.li/SZsgT" alt="לב">
+                    </button>
+                </td>
+                <td>
+                    <img src="https://did.li/oO1CN" class="images" id="img2" onclick="openModal('img2')">
+                    <a href="dobermann.html">Dobermann</a>
+                    <button class="heart-button">
+                        <img src="https://did.li/SZsgT" alt="לב">
+                    </button>
+                </td>
+                <td>
+                    <img src="https://did.li/zgEIw" class="images" id="img3" onclick="openModal('img3')">
+                    <a href="pitbull.html">Pit bull</a>
+                    <button class="heart-button">
+                        <img src="https://did.li/SZsgT" alt="לב">
+                    </button>
+                </td>
+                <td>
+                    <img src="https://did.li/i6b6q" class="images" id="img4" onclick="openModal('img4')">
+                    <a href="goldenretriever.html">Golden Retriever</a>
+                    <button class="heart-button">
+                        <img src="https://did.li/SZsgT" alt="לב">
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="https://did.li/OIhOf" class="images" id="img5" onclick="openModal('img5')">
+                    <a href="GermanShepherd.html">German Shepherd</a>
+                    <button class="heart-button">
+                        <img src="https://did.li/SZsgT" alt="לב">
+                    </button>
+                </td>
+                <td>
+                    <img src="https://did.li/Tr7lC" class="images" id="img6" onclick="openModal('img6')">
+                    <a href="Dachshund.html">Dachshund</a>
+                    <button class="heart-button">
+                        <img src="https://did.li/SZsgT" alt="לב">
+                    </button>
+                </td>
+                <td>
+                    <img src="https://did.li/aDyZH" class="images" id="img7" onclick="openModal('img7')">
+                    <a href="Yorkshire.html">Yorkshire</a>
+                    <button class="heart-button">
+                        <img src="https://did.li/SZsgT" alt="לב">
+                    </button>
+                </td>
+                <td>
+                    <img src="https://did.li/rO1CN" class="images" id="img8" onclick="openModal('img8')">
+                    <a href="SiberianHusky.html">Siberian Husky</a>
+                    <button class="heart-button">
+                        <img src="https://did.li/SZsgT" alt="לב">
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Modal להגדלת תמונה -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="imgModal">
+    </div>
+
+    <script>
+        // פונקציה לפתיחת המודל של התמונה
+        function openModal(imgId) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("imgModal");
+            var img = document.getElementById(imgId);
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        // פונקציה לסגור את המודל
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
 
 </body>
 
 </html>
+
+
+
+
